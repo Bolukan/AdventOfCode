@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/AdventOfCode/v15/sqlite3/storage.ide
+/.vs/AdventOfCode/v15
+/AdventOfCode/bin/Debug
+/AdventOfCode/obj/Debug

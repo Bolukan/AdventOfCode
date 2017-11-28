@@ -1,10 +1,13 @@
-﻿using System;
+﻿using AdventOfCode;
+using System;
 using System.Collections.Generic;
 
 namespace AdventOfCode2016
 {
-    public class Day23
+    public class Day23 : IDay
     {
+        public string InputFile { get { return "input.txt"; } }
+
         int[] register = new int[4] { 0, 0, 0, 0 };
         string[] instructions = new string[5] { "inc", "dec", "tgl", "jnz", "cpy" };
         string[] instructionstoggled = new string[5] { "dec", "inc", "inc", "cpy", "jnz" };
@@ -80,6 +83,11 @@ namespace AdventOfCode2016
 
             int register2 = FindRegister(argument2);
             return pointer + ((register2 == -1) ? int.Parse(argument2) : register[register2]);
+        }
+
+        public int Part1(string[] input)
+        {
+            return 0;
         }
 
         public int Part1(string[] input, int a)

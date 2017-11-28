@@ -13,11 +13,12 @@ namespace AdventOfCode
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
+            var challenge = new Day02();
+            
             // input file, prevents input clutter
-            var input = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "../../input01.txt");
+            var input = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "../../" + challenge.InputFile);
 
             // challenge 1 + 2
-            var challenge = new Day01();
             var output1 = challenge.Part1(input);
             var output2 = challenge.Part2(input);
 

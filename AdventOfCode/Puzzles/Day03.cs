@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace AdventOfCode
 {
-    public class Day01 : IDay
+    public class Day03 : IDay
     {
-        public string InputFile { get { return "input01.txt"; } }
+        public string InputFile { get { return "input03.txt"; } }
 
         public int Part1(string[] input)
         {

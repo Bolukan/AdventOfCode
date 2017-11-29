@@ -13,7 +13,7 @@ namespace AdventOfCode
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            var challenge = new Day02();
+            var challenge = new Day00();
             
             // input file, prevents input clutter
             var input = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "../../" + challenge.InputFile);

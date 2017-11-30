@@ -47,7 +47,7 @@ Consider all pairs of *different* markers (where a pair may consist of any 'A' a
         private int Answer01(Dictionary<Point, AB> points)
         {
             int maxDistance = 0;
-            foreach(KeyValuePair<Point, AB>  point in points)
+            foreach(KeyValuePair<Point, AB> point in points)
             {
                 int distance = Math.Abs(point.Key.X) + Math.Abs(point.Key.Y);
                 if (distance > maxDistance) maxDistance = distance;
@@ -69,10 +69,9 @@ Consider all pairs of *different* markers (where a pair may consist of any 'A' a
             return maxDistance;
         }
 
-        private void RegisterAB(int x, int y, string command, Dictionary<Point, AB> points)
+        private void RegisterAB(int x, int y, AB newAB, Dictionary<Point, AB> points)
         {
             Point currentPoint = new Point { X = x, Y = y };
-            AB newAB = new AB { A = command == "A", B = command == "B" };
 
             if (points.ContainsKey(currentPoint))
             {
@@ -98,10 +97,10 @@ Consider all pairs of *different* markers (where a pair may consist of any 'A' a
                     case "Right": X++; break;
                     case "Up": Y++; break;
                     case "Down": Y--; break;
-                    case "A": RegisterAB(X, Y, command, points); break;
-                    case "B": RegisterAB(X, Y, command, points); break;
+                    case "A": RegisterAB(X, Y, new AB { A = true}, points); break;
+                    case "B": RegisterAB(X, Y, new AB { B = true}, points); break;
                     case "Start": return points;
-                    default: break;
+                    default: throw new IndexOutOfRangeException(); break;
                 }
             }
             return points;

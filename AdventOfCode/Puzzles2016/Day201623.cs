@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace AdventOfCode2016
 {
-    public class Day23 : IDay
+    public class Day201623 : IDay
     {
         public string InputFile { get { return "input.txt"; } }
 

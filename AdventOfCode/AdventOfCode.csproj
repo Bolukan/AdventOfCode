@@ -42,12 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="Puzzles\Day00.cs" />
-    <Compile Include="Puzzles\Day04.cs" />
-    <Compile Include="Puzzles\Day03.cs" />
-    <Compile Include="Puzzles\Day02.cs" />
-    <Compile Include="Puzzles\Day01.cs" />
-    <Compile Include="Puzzles\Day2016-23.cs" />
+    <Compile Include="Puzzles2016\Day201601.cs" />
+    <Compile Include="Puzzles\Day201704.cs" />
+    <Compile Include="Puzzles\Day201703.cs" />
+    <Compile Include="Puzzles\Day201702.cs" />
+    <Compile Include="Puzzles\Day201701.cs" />
+    <Compile Include="Puzzles2016\Day201623.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Puzzles\IDay.cs" />

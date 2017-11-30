@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AdventOfCode
 {
-    public class Day03 : IDay
+    public class Day201703 : IDay
     {
         public string InputFile { get { return "input03.txt"; } }
 

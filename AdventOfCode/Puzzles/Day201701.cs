@@ -7,14 +7,27 @@ namespace AdventOfCode
     {
         public string InputFile { get { return "input01.txt"; } }
 
+        public Position pos;
+
+        private int MatchDigits(string input, int offset)
+        {
+            int modulos = input.Length;
+            int answer = 0;
+            for (int pos = 0; pos < modulos; pos++)
+            {
+                if (input[pos] == input[(pos + offset) % modulos]) answer += (int)Char.GetNumericValue(input[pos]);
+            }
+            return answer;
+        }
+
         public int Part1(string[] input)
         {
-            return input.Length;
+            return MatchDigits(input[0], 1);
         }
 
         public int Part2(string[] input)
         {
-            return int.Parse(input[0]);
+            return MatchDigits(input[0], input[0].Length/2);
         }
 
     }

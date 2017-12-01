@@ -7,8 +7,6 @@ namespace AdventOfCode
     {
         public string InputFile { get { return "input01.txt"; } }
 
-        public Position pos;
-
         private int MatchDigits(string input, int offset)
         {
             int modulos = input.Length;
